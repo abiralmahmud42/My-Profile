@@ -94,6 +94,7 @@ body {
     
 }
 
+/* change it */
 .home-content {
     max-width: 450px;
     left: 30px;
@@ -254,6 +255,7 @@ body {
 
 
 /* Media Queries */
+
 @media (max-width: 768px) {
     .header {
         padding: 20px 5%;
