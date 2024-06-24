@@ -9,6 +9,7 @@ body {
     color: antiquewhite;
 }
 
+/* make it responsive */
 .header {
     position: fixed;
     top: 0;
