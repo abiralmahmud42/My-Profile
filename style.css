@@ -1,6 +1,7 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    
+    margin: 1%;
+    padding: 1%;
     font-family:  sans-serif;
 }
 
@@ -13,14 +14,7 @@ body {
 .header {
     position: fixed;
     top: 0;
-    left: -10%;
-    width: 100%;
-    padding: 20px 10%; 
-    background: transparent;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 100;
+   
 }
 
 .logo {
