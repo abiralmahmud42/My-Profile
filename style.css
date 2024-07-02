@@ -1,20 +1,28 @@
 * {
-    
     margin: 1%;
-    padding: 1%;
-    font-family:  sans-serif;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
     background-color: #1f242d;
     color: antiquewhite;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-/* make it responsive */
+
 .header {
-    position: fixed;
-    top: 0;
-   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
 }
 
 .logo {
@@ -27,7 +35,6 @@ body {
     text-shadow: 0 0 4px rgb(117, 197, 43);
     animation: slideRight 1s ease forwards;
     animation-delay: 0.6s;
-
 }
 
 .logo:hover {
@@ -47,6 +54,7 @@ body {
     margin-left: 40px;
     transition: 0.5s;
 }
+
 .navbar a.active,
 .navbar a:hover {
     color: aquamarine;
@@ -54,25 +62,24 @@ body {
 
 .cv {
     position: absolute;
-    top: 85%;
-    left: 15%;
-    
+    top: 24vw;
+    left: 40vw;
 }
 
 .btn-1 {
     color: #1f242d;
     display: inline-block;
-    padding: 12px 28px;
+    padding: 2vw;
     border-radius: 40px;
     box-shadow: 0 0 5px;
     background-color: aquamarine;
     font-weight: 600;
+    width: 15vw;
 }
 
 .btn-1:hover {
     color: rgb(206, 123, 72);
     transition: 0.6s;
-
 }
 
 .home {
@@ -83,31 +90,26 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 65px 10% 0 10px;
-    
-    
-    
 }
 
-/* change it */
 .home-content {
     max-width: 450px;
-    left: 30px;
+    left: 2vw;
     position: relative;
-    top: 30px;
+    top: -10vw;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 0.7s;
 }
 
 .dev {
-    color: rgb(197, 84, 43);;
+    color: rgb(197, 84, 43);
     font-size: 28px;
     font-weight: 600;
-    
 }
 
 .hello {
-    color: rgb(197, 84, 43);;
+    color: rgb(197, 84, 43);
     font-size: 22px;
     font-weight: 600;
     font-family: 'Helvetica Neue';
@@ -122,34 +124,32 @@ body {
     animation-delay: 0.6s;
 }
 
-
 .home-content h3 {
-   font-family: 'Franklin Gothic Medium';
+    font-family: 'Franklin Gothic Medium';
 }
 
 .image-1 {
     position: relative;
-    top: 135px;
+    top: 1vw;
     max-width: 250px;
     max-height: 300px;
-    bottom: -5px;
-    
 }
 
 .shape {
+    top: 9vw;
     position: relative;
     max-height: 238px;
     max-width: 280px;
-   
-   
+    right: 2vw;
 }
 
-.image{
+.image {
     width: 45%;
     height: 80%;
     position: absolute;
     bottom: 0;
     right: 110px;
+    right: 2vw;
 }
 
 .image img {
@@ -161,103 +161,77 @@ body {
     transition: bottom 1s, left 1s;
 }
 
-.image:hover .shape{
+.image:hover .shape {
     bottom: 32px;
-    
 }
 
-.image:hover .image-1{
-     left: 75%;       
-}
-
-
-.social-media {
-    position: absolute;
-    width: 100%;
-    padding: 20px 10%;
-    top: 100%;
-    left: -1%;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.6s;
+.image:hover .image-1 {
+    left: 75%;
 }
 
 
-.insta {
-    height: 30px;
-    width: 30px;
-    margin-left: 20px;
-    border: none;
-    border-radius: 50%;
-}
 
-.linkedin {
-    height: 30px;
-    width: 30px;
-    margin-left: 50px;
-    border-radius: 50%;
-
-}
-
-.github {
-    height: 30px;
-    width: 30px;
-    margin-left: 50px;
-    border-radius: 50%;
-
-}
-
-.facebook {
-    height: 30px;
-    width: 30px;
-    margin-right: 45px;
-    border-radius: 50%;
-
-}
-
-.facebook:hover,
-.github:hover,
-.insta:hover,
-.linkedin:hover {
-    box-shadow: 0 0 20px rgb(197, 84, 43);
-
-}
 
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-
 @keyframes slideBottom {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-
 /* Media Queries */
-
 @media (max-width: 768px) {
     .header {
         padding: 20px 5%;
     }
 
+    .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1f242d;
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: none;
+    }
+
     .navbar a {
         font-size: 18px;
-        margin-left: 20px;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
     }
 
     .home {
