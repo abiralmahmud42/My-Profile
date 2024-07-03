@@ -74,7 +74,7 @@ body {
     box-shadow: 0 0 5px;
     background-color: aquamarine;
     font-weight: 600;
-    width: 15vw;
+    width: 35vw;
 }
 
 .btn-1:hover {
@@ -197,13 +197,13 @@ body {
 /* Media Queries */
 @media (max-width: 768px) {
     .header {
-        padding: 20px 5%;
+        padding: 25px 8vw;
     }
 
     .navbar {
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 10vw;
         right: 20px;
         background-color: #1f242d;
         border: 1px solid #ccc;
@@ -259,20 +259,12 @@ body {
         transform: translateX(-50%);
     }
 
-    .social-media {
-        flex-direction: column;
-        top: auto;
-        bottom: 20px;
-    }
-
-    .social-media a {
-        margin: 5px 0;
-    }
+    
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 20px;
+        padding-top: 20vw;
     }
 
     .navbar a {
@@ -281,10 +273,65 @@ body {
     }
 
     .home {
-        padding: 65px 2%;
+        padding: 75px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+        left: -2vw;
+        
     }
 
     .home-content h3 {
         font-size: 22px;
     }
+
+    .image {
+        height: auto;
+        margin: 20px auto 0;
+        position: relative;
+        right: 0;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        transform: translateX(0);
+    }
+
+     .shape {
+        top: 55%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .image-1 {
+        height: fit-content;
+        position: relative;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .cv {
+        width: 50vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    
 }
+
