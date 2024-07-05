@@ -267,7 +267,7 @@ body {
     .header {
         padding-top: 15vw;
         position: relative;
-        z-index: 2000; /* Ensure the menu button is on top */
+        z-index: 2000; 
     }
 
     .navbar {
@@ -294,7 +294,7 @@ body {
         position: absolute;
         top: 15vw;
         right: 10vw;
-        z-index: 2001; /* Ensure the menu button is on top */
+        z-index: 2001; 
     }
 
     .menu-toggle div {
